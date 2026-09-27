@@ -12,15 +12,32 @@ export default {
 
     devtool: "eval-source-map",
     devServer: {
+        static: {
+            directory: path.resolve(import.meta.dirname, "dist"),
+        },
         watchFiles: ["./src/template.html"],
         port: 8080,
+        open: true,
     },
 
     plugins: [
         new HtmlWebpackPlugin ({
-            template: "./src/template.html"
-        })
-    ]
+            template: "./src/template.html",
+        }),
+    ],
 
+    module: {
+        rules:[
+            {
+               type: "asset/resource",
+               test: /\.(png|jpe?g|gif|svg)$/i,
 
-}
+            },
+            {
+               test: /\.css$/i,
+               use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
+
+};
