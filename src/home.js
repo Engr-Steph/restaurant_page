@@ -7,7 +7,7 @@ function loadHomePage() {
     heading.textContent = "Stephanie's Restaurant";
 
     const paragraph = document.createElement("p");
-    paragraph.textContent =  "Welcome to Stephanie's Restaurant! We serve delicious food made with fresh ingredients. (JESUS CHRIST IS LORD)";
+    paragraph.textContent =  "Welcome to Stephanie's Restaurant! We serve delicious food made with fresh ingredients. (JESUS CHRIST IS KING)";
 
     const image = document.createElement("img");
     image.src = restaurantImage;
